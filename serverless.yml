@@ -1,0 +1,14 @@
+service: jwtRsaCustomAuthorizer
+ 
+provider:
+  name: aws
+  runtime: nodejs12.x
+  memorySize: 128 # optional, in MB, default is 1024
+
+functions:
+  auth:
+    handler: index.handler
+    environment:
+      JWKS_URI: ${env:JWKS_URI}
+      AUDIENCE: ${env:AUDIENCE}
+      TOKEN_ISSUER: ${env:TOKEN_ISSUER}
