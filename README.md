@@ -62,7 +62,7 @@ Get the ACCESS_TOKEN can be found using the cURL:
 
 ~~~~
 curl --request POST \
-  --url https://lariskovski.auth0.com/oauth/token \
+  --url https://{your-tenant}}.auth0.com/oauth/token \
   --header 'content-type: application/json' \
   --data '{"client_id":"xxxxxxxxxxxxxx","client_secret":"yyyyyyyyyyyyy","audience":"api.mycompany.com/pokedex","grant_type":"client_credentials"}'
 ~~~~
